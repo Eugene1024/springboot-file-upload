@@ -1,0 +1,9 @@
+com\github\dylanz666\bean\MyFile.class
+com\github\dylanz666\mapper\MyFileMapper.class
+com\github\dylanz666\service\MyFileService.class
+com\github\dylanz666\config\MultipartConfig.class
+com\github\dylanz666\controller\FileDownloadController.class
+com\github\dylanz666\controller\FileUploadController.class
+com\github\dylanz666\controller\DeleteFileLController.class
+com\github\dylanz666\controller\FileList.class
+com\github\dylanz666\App.class

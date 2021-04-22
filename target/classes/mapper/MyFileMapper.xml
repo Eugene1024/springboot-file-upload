@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.eugene1024.mapper.MyFileMapper">
+    <select id="getFileList" resultType="com.github.eugene1024.bean.MyFile">
+        select id,name from file
+    </select>
+    <insert id="addFile" parameterType="com.github.eugene1024.bean.MyFile" useGeneratedKeys="true">
+        insert into file (name) values(#{name})
+    </insert>
+    <delete id="deleteFile" parameterType="String">
+        delete from file where id = #{id}
+    </delete>
+</mapper>
