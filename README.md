@@ -9,6 +9,7 @@ spring-boot-file-upload-demo
 需要mysql 5.0及以上， JDK 1.7及以上环境
 下载或则克隆岛本地后，配置好数据库，使用Idea打开运行
 
-# change  log
-v 1.0
-完成了基本功能
+# 技术栈
+1. Springboot 
+2. Mybatis
+3. MySQL
