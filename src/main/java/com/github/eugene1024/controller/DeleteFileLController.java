@@ -22,8 +22,11 @@ public class DeleteFileLController {
         System.out.println(id);
         System.out.println(fileName);
         //删除文件，删除数据库数据
-        String filePath = req.getSession().getServletContext().getRealPath("imgupload/");
-        File file = new File(filePath, fileName);
+       // String filePath = req.getServletContext().getRealPath("imgupload/");
+       // File file = new File(filePath, fileName);
+        String IMG_PATH_PREFIX = "static/upload/imgs";
+        String fileDirPath = new String("src/main/resources/" + IMG_PATH_PREFIX);
+        File file = new File(fileDirPath, fileName);
         if(file.delete()&&myFileService.deleteFile(id)){
             System.out.println(file.getName() + " 文件已被删除！");
         }

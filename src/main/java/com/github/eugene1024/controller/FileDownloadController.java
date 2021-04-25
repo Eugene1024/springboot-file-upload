@@ -34,8 +34,9 @@ public class FileDownloadController {
     @GetMapping("/file")
     public String download(@RequestParam String fileName) {
         try {
-            File file = new File(rootPath, fileName);
-
+            String IMG_PATH_PREFIX = "static/upload/imgs";
+            String fileDirPath = new String("src/main/resources/" + IMG_PATH_PREFIX);
+            File file = new File(fileDirPath, fileName);
             HttpServletResponse response = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getResponse();
             assert response != null;
             response.setContentType("application/force-download");

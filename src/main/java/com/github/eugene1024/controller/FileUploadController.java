@@ -33,12 +33,22 @@ public class FileUploadController {
     @PostMapping("/file")
     public String upload(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
         try {
+
+            String IMG_PATH_PREFIX = "static/upload/imgs";
+            String fileDirPath = new String("src/main/resources/" + IMG_PATH_PREFIX);
+
+            File fileDir = new File(fileDirPath);
+            if(!fileDir.exists()){
+                // 递归生成文件夹
+                fileDir.mkdirs();
+            }
+
             String pjtPath = request.getSession().getServletContext().getRealPath("");
             System.out.println("路径:"+pjtPath);
-            String filePath = request.getSession().getServletContext().getRealPath("imgupload/");
+            String filePath = request.getServletContext().getRealPath("imgupload/");
             //File path = new File(ResourceUtils.getURL("classpath:").getPath());
-           // System.out.println(path.getAbsolutePath());
-           // File upload = new File(path.getAbsolutePath(),"static/images/upload/");
+            // System.out.println(path.getAbsolutePath());
+            // File upload = new File(path.getAbsolutePath(),"static/images/upload/");
             //if(!upload.exists()) upload.mkdirs();
             //在开发测试模式时，得到的地址为：{项目跟目录}/target/static/images/upload/
             //在打包成jar正式发布时，得到的地址为：{发布jar包目录}/static/images/upload/
@@ -54,7 +64,11 @@ public class FileUploadController {
             assert fileName != null;
             System.out.println(fileName);
 
-            File dest = new File(file1.getAbsolutePath(),fileName);
+            //File dest = new File(file1.getAbsolutePath(),fileName);
+            System.out.println("-------");
+            System.out.println(fileDirPath);
+            System.out.println(fileDir.getAbsolutePath());
+            File dest = new File(fileDir.getAbsolutePath() ,fileName);
 
             file.transferTo(dest);
             MyFile myFile = new MyFile();
