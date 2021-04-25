@@ -1,6 +1,3 @@
-# spring-boot-file-upload-demo
-spring-boot-file-upload-demo
-
 # 项目背景
 公司内网经常需要给用户安装一些常用的软件，或则共享一些文件，使用通讯软件不太方便，
 就诞生了怎么一个项目，用户打开文件共享页面，就能操作上传和下载，比较方便
