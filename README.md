@@ -7,7 +7,7 @@
 下载或则克隆岛本地后，配置好数据库，使用Idea打开运行
 
 运行后界面如下：
-![文件管理](https://raw.githubusercontent.com/eugene1024/springboot-file-upload/master/src/main/resources/springboot-file.png  
+![文件管理](https://raw.githubusercontent.com/eugene1024/springboot-file-upload/master/src/main/resources/springboot-file.png)  
 
 
 
