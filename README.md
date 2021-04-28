@@ -11,8 +11,11 @@
 ![文件管理](https://raw.githubusercontent.com/eugene1024/springboot-file-upload/master/src/main/resources/springboot-file.png)  
 
 
+# 项目特点
+文件上传到指定项目路径（在配置文件里配置）下，对文件的管理和维护操作比较简单
 
 # 技术栈
 1. Springboot 
 2. Mybatis
 3. MySQL
+
